@@ -1,0 +1,89 @@
+body{
+	background-color:#F0F0F0;
+}
+a{
+	text-decoration: none;
+}
+
+#top_header{
+	background-color:#006699;
+	height: 60px;
+	left: 0;
+	max-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	color:white;
+}
+#top_header a{ color:white;}
+#top_header a:hover{ color:#cff400;}
+#top_header h1{
+	margin:15px;
+}
+
+#top_menu{
+	float:left;
+	background:0099CC;
+	color:white;
+	position: absolute;
+	right: 110px;
+	top: 15px;
+	width: auto;
+	height:50px;
+	top: 10%;
+	max-width: 100%;
+	min-width:30%;
+}
+#top_menu li{
+	display:inline-block;
+	list-style:circle;
+	padding:5px 5px 5px 50px;
+	font:bold 18px Tahoma;
+}
+
+#main_section{
+	float:left;
+	color:#A0A0A0;
+	font:bold 28px Tahoma;
+}
+#main_img{
+	top: 0;	
+	left: 0;
+	width: 100%;
+}
+#main_btn{
+	position:relative;
+	margin-left:18%;
+}
+.btnClick{
+	float:left;
+	margin:10px auto auto 100px;
+	padding-top:10px;
+	display:block;
+	text-align:center;
+}
+.btnClick h3{
+	font:bold 26px Tahoma;
+	margin-top:-10px;
+}
+#btn1{
+	width:50%;
+}
+#btn2{
+	width:50%;
+}
+#context1{
+	font:bold 18px Tahoma;
+	padding-left:10px;
+}
+#context2{
+	font:bold 18px Tahoma;
+	padding-left:15px;
+}
+#the_footer{
+	clear:both;
+	text-align:center;
+	padding:10px;
+	border-top:1px solid #006699;
+	font-family:Tahoma;
+}

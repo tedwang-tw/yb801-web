@@ -1,0 +1,295 @@
+body{
+	background-color:#F0F0F0;
+	font-family: Arial,Helvetica,sans-serif;
+}
+a{
+	text-decoration: none;
+}
+header{
+	z-index:2;
+}
+#top_header{
+	background-color:#006699;
+	height: 60px;
+	left: 0;
+	max-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	color:white;
+	
+}
+#top_header a{ color:white;}
+#top_header a:hover{ color:#cff400;}
+#top_header h1{
+	margin:15px;
+}
+
+#top_menu{
+	float:left;
+	color:white;
+	position: absolute;
+	right: 110px;
+	top: 15px;
+	width: auto;
+	height:50px;
+	top: 10%;
+	max-width: 100%;
+	min-width:30%;
+}
+#top_menu li{
+	display:inline-block;
+	list-style:circle;
+	padding:5px 5px 5px 50px;
+	font:bold 18px Tahoma;
+}
+#content{
+	float:left;
+	position:relative;
+	margin-top:150px;
+	width:100%;
+	//border:1px solid red;
+	
+}
+#job_groupArea{
+	float:left;
+	position:relative;
+	margin-left:20%;
+	width:75%;
+}
+#bgimg{
+	float:left;
+	position:relative;
+	text-align:center;
+	margin:10% 5% 30% 25%;
+	width:400px;
+	height:50px;
+	//border:3px solid red;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-size:150%;
+	color:#868686;
+	padding-top:30px;
+}
+/*初始畫面*/
+#bgimg span{
+	font-size:220%;
+}
+#Select{
+	float:left;
+	position:fixed;
+	margin:10px 30px 0 10px;
+	width:18%;
+	//border:1px solid pink;
+	text-align:center;
+	border-radius:300px;
+}
+
+.toggle_button{
+	float:left;
+	position:relative;
+	border:1px solid gray;
+	background-color:white;
+	width:120px;
+	height:120px;
+	border-radius:60px;
+	margin:20px 0 10px 100px;
+	//box-shadow: 1px 1px 5px #999999;
+}
+.toggle_button:hover{
+	box-shadow: 1px 1px 10px #999999;
+	//background-color:#CFA600;
+	cursor: pointer; 
+}
+.toggle_button:active{
+	-moz-box-shadow:0px 0px 10px #999 inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 10px #999 inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 10px #999 inset;                    /* For Latest Opera */
+}
+.toggle_button span{
+	float:left;
+	width:100%;
+	padding-top:50%;
+	//border:1px solid red;
+	font:bold 24px Tahoma;
+}
+
+.selector{
+	float:left;
+	margin:5% 15% 5% 15%;
+	width:70%;
+	
+	//border:1px solid blue;
+}
+#unChoose{
+	
+}
+#usr_menu,#choose
+{
+	padding:10px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+	font: 20px Tahoma;
+	cursor: pointer; 
+	overflow-x: auto; /* Hide horizontal scroll bar*/
+	overflow-y: auto; /*Show vertical scroll bar*/
+}
+#usr_menu{
+	font:bold 20px Tahoma;
+}
+#choose:hover{
+	background: -webkit-linear-gradient(left top, #e5eecc , #CED6B8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #e5eecc, #CED6B8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #e5eecc, #CED6B8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #e5eecc , #CED6B8); /* Standard syntax (must be last) */
+}
+#usr_menu ul{
+	width:100%;
+	display:block;
+	list-style:none;
+	margin:0 0 0 -50px;
+}
+#usr_menu li{
+	display:block;
+	width:100%;
+	padding:5px;
+	margin:5px;
+}
+#usr_menu li:hover{
+	background-color:#CED6B8;
+}
+#usr_menu
+{
+display:none;
+}
+/*Ranking Table*/
+table{
+	border:3px solid white;
+	background-color:white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: -5px -2px 5px #888888;
+	width:100%;
+}
+
+td h3{
+	
+	font-size:36px;
+	color:#006699;
+}
+thead{
+	position:relative;
+	background-color:white;
+	z-index:1;
+	line-height:0px;
+	height:10px;
+	text-shadow: 1px 1px 2px rgba(50,50,50,3);
+	text-align:center;
+	color:#F0F0F0;
+	font-size:24px;
+}
+.tbg1{
+	background-color:/*#B2B2B2*/#6B8AB8;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	height:150px;
+	width:490px;
+}
+.tbg2{
+	background-color:/*#999999*/#5C6B99;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	height:150px;
+	width:490px;
+}
+.tbg1:hover,.tbg2:hover{
+	box-shadow: 0px 0px 15px yellow;
+}
+.ranking{
+	
+	top: 0px;
+	width: 100px;
+	text-align: center;
+	font-family: "Nunito",Geneva,Verdana,sans-serif;
+	font-size: 48px;
+	line-height: 56px;
+	font-weight: 100;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+}
+.result{
+	margin:10px;
+	top: 0px;
+	line-height: 36px;
+	font-weight: 100;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	font-size: 16px;
+}
+.job,.job a{
+	
+	text-align: center;
+	color:white;
+	font-family: "微軟正黑體","Nunito",Geneva,Verdana,sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	line-height: 56px;
+	position: relative;
+	display: block;
+	font-size: 150%;
+}
+.com{
+	font-family: "微軟正黑體","Nunito",Geneva,Verdana,sans-serif;
+	font-size: 110%;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	text-align: center;
+	display: block;
+}
+#bgc1{background-color:#99C2D6}
+
+/* Tag cloud */
+
+		#tags ul{
+			margin:1em 0;
+			padding:.5em 10px;
+			text-align:center;
+			background: -webkit-linear-gradient(0deg, #66A3C2, #006699); 
+			background: -o-linear-gradient(0deg, #66A3C2, #006699); 
+			background: -moz-linear-gradient(0deg, #66A3C2, #006699); 
+			background: linear-gradient(0deg, #66A3C2, #006699); 
+			border-radius: 20px 20px 20px 20px;
+			
+			}
+		#tags li{
+			margin:5px 5px 0 5px;
+			padding:0;
+			list-style:none;
+			display:inline;
+			font-family: "微軟正黑體","Nunito",Geneva,Verdana,sans-serif;
+			font-weight: bold;
+			text-shadow: 1px 1px 2px rgba(150,150,150,5);
+			color:#fff;
+			padding:0 2px;	
+			display:inline-block;
+			}
+		#tags li:hover{	
+			border:3px solid #cff400;
+			color:#cff400;
+			cursor:default;
+			}		
+		
+		.tag1{font-size:100%;}
+		.tag2{font-size:120%;}
+		.tag3{font-size:140%;}
+		.tag4{font-size:180%;}
+		.tag5{font-size:300%;}
+
+#the_footer{
+	clear:both;
+	text-align:center;
+	margin-top:10px;
+	padding:10px;
+	border-top:1px solid #006699;
+	font-family:Tahoma;
+}
