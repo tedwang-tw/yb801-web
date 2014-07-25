@@ -1,13 +1,13 @@
 		$(document).ready(function(){
 			$("table").hide();	//隱藏Table
-			$("#choose").attr("style","box-shadow: 0px 0px 15px yellow;");	//提示黃光
+			$("#choose").hide().fadeIn('slow');
 			
 			
 			//usr_menu
 			$.getJSON("data/recommendation/resumelist.json", function(data){
 				var userList = '<ul>'
 				for(var i=1; i <= data.resumes.length; i++)
-					userList += '<li>user_' + i + '</li>';
+					userList += '<li>user_' + ((i<10)? '0'+ i : i) + '</li>';
 				userList += '</ul>';
 				$("#usr_menu").append(userList);
 			});
@@ -16,7 +16,6 @@
 			var isClick = false;	//按鈕是否被啟動
 			$("#choose").on('click',function(){				
 				$("#usr_menu").slideToggle("fast");				
-				$("#choose").removeAttr("style");	//移除提示黃光
 				if(isClick){
 					isClick = false;
 				}
@@ -31,11 +30,13 @@
 			
 			$("#usr_menu").on('click', 'li', function(){	//click後才搜尋 #usr_menu 的li
 				$("#usr_menu").slideUp("fast");
-				$("#bgimg").hide();
+				$("#bg_info").hide();
 				var clickUser = $(this).text();
 				$("#choose").text( clickUser );
 				$("#choose").removeAttr("style");
-				loadResume(parseInt( clickUser.substring(clickUser.length -1)) - 1);
+				var num = clickUser.substring(clickUser.length -2);
+				loadResume(parseInt(num) - 1);
+				console.log(parseInt(num) - 1);
 				isClick = false;
 			});
 				
@@ -47,18 +48,21 @@
 					var doc= 'data/recommendation/';
 					doc += data1.resumes[uid].id_no;
 					doc += ".json";
-					console.log(doc);
+					//console.log(doc);
 					$("#userId").text("User ID : " + data1.resumes[uid].id_no);
+					console.log(data1.resumes[uid].id_no);
 					$.getJSON(doc, function(data){
 						var info = '';
 						var arr = data.jobs;
 						var rank = 1;
-
+/*
 						arr = arr.sort(function(a, b){
 							if (a.similarity < b.similarity)	return 1;
 							if (a.similarity > b.similarity)	return -1;
 							return 0;
 						});
+					*/	
+					
 						
 						for( var i=0; i < arr.length; i++){
 							var similar = parseFloat(arr[i].similarity.toString());
@@ -74,10 +78,17 @@
 							info += "<td><a href='clusters.html?0"+arr[i].group+"'><img src='images/skill_clustering_g.gif'/></a><td/>";
 							info += "</tr>";
 						}
-						
 						$("#tags").html("");
-						$("#tags").append(info);
-						$("table").fadeIn("fast");
+						
+						if(arr.length == 0){
+							console.log('ZERO');
+							$("#bg_info").html('No Recommendation can be provided.<p><span>Sorry...</span>');
+							$("#bg_info").attr('style','border:2px solid #868686;border-radius:25px;height:200px;margin-bottom:38%;').show();
+							$('table').hide();
+						}else{
+							$("#tags").append(info);
+							$("table").fadeIn("fast");
+						}												
 					});		
 				});
 			};

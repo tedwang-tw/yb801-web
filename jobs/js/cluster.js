@@ -1,27 +1,43 @@
 $(document).ready(function(){
 			
-			var clusterList = '';
+			var clusterList = 'data/clusters/clustergroup.json';
 			var clusterType = '';
 			$("table").hide();	//隱藏Table
-			//$("#choose").attr('id')
-			
-			
+			$('#selector').hide();
+			//$("#choose").attr('id')			
 			
 			//外部連進網頁處理
 			var sideNum = location.search.substring(1);//取得網址'?'後的id三碼
 			if(sideNum != ""){
 				//alert('location.search: '+sideNum);
 				$("#bgimg").hide();
-				$('#job_button').attr('style','background-color:#80B2CC;');
+				$('#selector').show();
+				$("#choose").text( "Cluster "+ sideNum.substring(1) );
+				
+				//usr_menu
+				$.getJSON(clusterList, function(data){
+					$("#usr_menu").html("");
+					var userList = '<ul>'
+					for(var i=0; i< data.clusters.length; i++)
+					userList += '<li>'+ clusterType +'  ' + data.clusters[i].id + '</li>';
+					userList += '</ul>';
+					$("#usr_menu").append(userList);
+				});
+				$('#job_button').attr('style','background-color:#80B2CC;color:black;');
 				loadGroup_job(sideNum);
 			}					
 			
 			
 			//選擇Skill or Job
 			$(".toggle_button").on('click',function(){
-				$('.toggle_button').removeAttr('style');
-				$(this).attr('style','background-color:#80B2CC;');
-				clusterList = 'data/clusters/clustergroup.json';
+			
+				//Change 藍色標記
+				$('.toggle_button').removeAttr('style');	
+				$(this).attr('style','background-color:#80B2CC;color:black;');
+				
+				
+				$('#selector').fadeIn('slow');
+				
 				if($(this).text() == 'Job')
 					clusterType = 'Job';
 				else
@@ -56,6 +72,7 @@ $(document).ready(function(){
 			$("#choose").on('click',function(){
 				$("#usr_menu").slideToggle("fast");	
 				$("#choose").removeAttr("style");	//移除提示黃光 or 按鈕凹陷效果
+				$("#choose").text( "Select Cluster" );
 				if(isClick){
 					isClick = false;
 				}
@@ -71,9 +88,9 @@ $(document).ready(function(){
 				$("#usr_menu").slideUp("fast");
 				$("#bgimg").hide();
 				var clickUser = $(this).text();
-				$("#choose").text( "Select Cluster" );
 				
 				var num = clickUser.substring(clickUser.length -3);
+				$("#choose").text( "Cluster "+ num );
 				console.log(num);
 				if(clusterType == 'Job')
 					loadGroup_job(num);
