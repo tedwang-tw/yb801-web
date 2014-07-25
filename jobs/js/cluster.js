@@ -3,8 +3,7 @@ $(document).ready(function(){
 			var clusterList = 'data/clusters/clustergroup.json';
 			var clusterType = '';
 			$("table").hide();	//隱藏Table
-			$('#selector').hide();
-			//$("#choose").attr('id')			
+			$('#selector').hide();			
 			
 			//外部連進網頁處理
 			var sideNum = location.search.substring(1);//取得網址'?'後的id三碼
@@ -12,14 +11,14 @@ $(document).ready(function(){
 				//alert('location.search: '+sideNum);
 				$("#bgimg").hide();
 				$('#selector').show();
-				$("#choose").text( "Cluster "+ sideNum.substring(1) );
+				$("#choose").text( "Cluster "+ sideNum );
 				
 				//usr_menu
 				$.getJSON(clusterList, function(data){
 					$("#usr_menu").html("");
 					var userList = '<ul>'
-					for(var i=0; i< data.clusters.length; i++)
-					userList += '<li>'+ clusterType +'  ' + data.clusters[i].id + '</li>';
+					for(var i=1; i<= data.clusters.length; i++)
+					userList += '<li>Job 0'+ ((i<10)? '0'+ i : i) + '</li>';
 					userList += '</ul>';
 					$("#usr_menu").append(userList);
 				});
