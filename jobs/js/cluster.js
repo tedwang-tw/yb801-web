@@ -21,6 +21,7 @@ $(document).ready(function(){
 					userList += '<li>Job 0'+ ((i<10)? '0'+ i : i) + '</li>';
 					userList += '</ul>';
 					$("#usr_menu").append(userList);
+					clusterType = 'Job';
 				});
 				$('#job_button').attr('style','background-color:#80B2CC;color:black;');
 				loadGroup_job(sideNum);
