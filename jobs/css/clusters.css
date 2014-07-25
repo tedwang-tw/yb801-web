@@ -94,9 +94,11 @@ header{
 	border-radius:60px;
 	margin:20px 0 10px 100px;
 	//box-shadow: 1px 1px 5px #999999;
+	color:#F0F0F0;
 }
 .toggle_button:hover{
 	box-shadow: 1px 1px 10px #999999;
+	color:#868686;
 	//background-color:#CFA600;
 	cursor: pointer; 
 }
@@ -188,7 +190,7 @@ thead{
 	font-size:24px;
 }
 .tbg1{
-	background-color:/*#B2B2B2*/#6B8AB8;
+	background-color:/*#B2B2B2*/#397EAD;
 	color:white;
 	border-right:1px solid white;
 	border-bottom:1px solid white;
@@ -196,7 +198,7 @@ thead{
 	width:490px;
 }
 .tbg2{
-	background-color:/*#999999*/#5C6B99;
+	background-color:/*#999999*/#0769AD;
 	color:white;
 	border-right:1px solid white;
 	border-bottom:1px solid white;
