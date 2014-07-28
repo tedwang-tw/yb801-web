@@ -75,7 +75,7 @@
 							info += "<td class='rank'><a href="+arr[i].url+"  target='_blank'><div class='tbg2'><span class='job'>";
 							info += arr[i].title;
 							info += "</span ><span class='com'>"+arr[i].company+"</span></div></a></td>";
-							info += "<td><a href='clusters.html?0"+ (arr[i].group<10?'0'+arr[i].group:arr[i].group) +"'>";
+							info += "<td><a href='clusters.html?0"+ (arr[i].group<10?'0'+arr[i].group:arr[i].group) +"'  target='_blank'>";
 							info += "<img src='images/skill_clustering_g.gif'/></a><td/>";
 							info += "</tr>";
 						}

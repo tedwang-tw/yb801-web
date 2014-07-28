@@ -196,6 +196,8 @@ thead{
 	border-bottom:1px solid white;
 	height:150px;
 	width:490px;
+	overflow-x: auto; /* Hide horizontal scroll bar*/
+	overflow-y: auto; /*Show vertical scroll bar*/
 }
 .tbg2{
 	background-color:/*#999999*/#0769AD;
@@ -204,6 +206,8 @@ thead{
 	border-bottom:1px solid white;
 	height:150px;
 	width:490px;
+	overflow-x: auto; /* Hide horizontal scroll bar*/
+	overflow-y: auto; /*Show vertical scroll bar*/
 }
 .tbg1:hover,.tbg2:hover{
 	box-shadow: 0px 0px 15px yellow;

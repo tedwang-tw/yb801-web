@@ -107,7 +107,20 @@ $(document).ready(function(){
 					$("thead h3").text("Cluster-"+uid);
 					info += '<tr><td><ul>';
 					$.each(data.cloud, function(index, contactInfo){
-						var freq = Math.floor((Math.random() * 5) + 1);
+						var size = data.cloud.length;
+						var freq = 0;
+						if(index <20) 
+							freq = 5;
+						else{
+							if (index >=20 && index < size/4*1 )
+								freq = 4;
+							else if (index >= size/4*1  && index < size/2 )
+								freq = 3;
+							else if (index >= size/2 && index < size/4*3 )
+								freq = 2;
+							else
+								freq = 1;
+						}						
 						info += '<li class="tag'+ freq +'">';
 						info += contactInfo.keyword + "</li>";
 					});
@@ -134,9 +147,11 @@ $(document).ready(function(){
 							
 							info += "<tr>";
 							for(var j=0; j < 3; j++){ //一排顯示三筆資料
-								info += "<td class='rank'><a href="+arr[i +j].url+"  target='_blank'><div class='tbg"+bg+"'><span class='job'>";
+								info += "<td class='rank'><a class='hint--bottom' data-hint='"+arr[i +j].words+"' href="+arr[i +j].url;
+								info += " target='_blank' ><div class='tbg"+bg+"'><span class='job'>";
 								info += arr[i +j].title;
 								info += "</span ><span class='com'>"+arr[i +j].company+"</span></div></a></td>";
+								
 							}
 							info += "</tr>";
 							if(bg==2) 	bg = 1;
