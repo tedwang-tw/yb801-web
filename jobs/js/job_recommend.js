@@ -49,7 +49,7 @@
 					doc += data1.resumes[uid].id_no;
 					doc += ".json";
 					//console.log(doc);
-					$("#userId").text("User ID : " + data1.resumes[uid].id_no);
+					$("#userId").text("User ID : " + data1.resumes[uid].id_no).append("<a class='hint--bottom' data-hint='"+data1.resumes[uid].words+"' >");
 					console.log(data1.resumes[uid].id_no);
 					$.getJSON(doc, function(data){
 						var info = '';
@@ -75,7 +75,7 @@
 							info += "<td class='rank'><a href="+arr[i].url+"  target='_blank'><div class='tbg2'><span class='job'>";
 							info += arr[i].title;
 							info += "</span ><span class='com'>"+arr[i].company+"</span></div></a></td>";
-							info += "<td><a href='clusters.html?0"+ (arr[i].group<10?'0'+arr[i].group:arr[i].group) +"'  target='_blank'>";
+							info += "<td><a class='hint--bottom' data-hint='"+arr[i].words+"' href='clusters.html?0"+ (arr[i].group<10?'0'+arr[i].group:arr[i].group) +"'  target='_blank'>";
 							info += "<img src='images/skill_clustering_g.gif'/></a><td/>";
 							info += "</tr>";
 						}
