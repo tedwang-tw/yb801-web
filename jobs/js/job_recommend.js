@@ -69,13 +69,14 @@
 			
 				
 				//讀取resumelist檔取出使用者
-				$.getJSON("data/recommendation/resumelist.json", function(data1){
+				$.getJSON( listPath , function(data1){
 					var doc= 'data/recommendation/';
 					doc += data1.resumes[uid].id_no;
 					doc += ".json";
 					//console.log(doc);
 					$("#icon").html("<a href='"+data1.resumes[uid].referer+"' target='_blank'><img src='images/"+listType+".png' /></a>");
-					$("#userId").html("<a class='hint--bottom' data-hint='"+data1.resumes[uid].words+"' >User ID : " + data1.resumes[uid].id_no + "</a>")
+					$("#userId").html("<a class='hint--bottom' data-hint='"+data1.resumes[uid].words+"' >"
+						+(listType == 'Job'? "Job" : "User")+" ID : " + data1.resumes[uid].id_no + "</a>");
 					console.log(data1.resumes[uid].id_no);
 					$.getJSON(doc, function(data){
 						var info = '';
