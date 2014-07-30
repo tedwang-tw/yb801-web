@@ -96,16 +96,17 @@
 						for( var i=0; i < arr.length; i++){
 							var similar = parseFloat(arr[i].similarity.toString());
 							similar = Math.round(similar*1000)/10;	//similar 百分比取小數1位
-							
+							var gid = (arr[i].group<10?'0'+arr[i].group:arr[i].group);
 							info += "<tr>";
 							info += "<td class='rank'><div class='tbg1'><div class='tbg1' style='background-color:#CCAB6A;width:";
 							info += similar +"%;'><span class='ranking'>"+(i + 1)+"</span >";
 							info += "<span class='result' style='left:50px;'>"+ similar +"</span></div></div></td>";
-							info += "<td class='rank'><a  class='hint--bottom' data-hint='"+arr[i].words+"'href="+arr[i].url;
+							info += "<td class='rank'><a class='hint--bottom' data-hint='"+arr[i].words+"' href="+arr[i].url;
 							info += "  target='_blank'><div class='tbg2'><span class='job'>";
 							info += arr[i].title;
 							info += "</span ><span class='com'>"+arr[i].company+"</span></div></a></td>";
-							info += "<td><a href='clusters.html?0"+ (arr[i].group<10?'0'+arr[i].group:arr[i].group) +"'  target='_blank'>";
+							info += "<td><a class='hint--bottom' data-hint='Cluster "+ gid;
+							info += "' href='clusters.html?0"+ gid +"'  target='_blank'>";
 							info += "<img src='images/skill_clustering_g.gif'/></a><td/>";
 							info += "</tr>";
 						}
