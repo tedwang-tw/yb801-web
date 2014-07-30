@@ -1,0 +1,238 @@
+body{
+	background-color:#F0F0F0;
+}
+a{
+	text-decoration: none;
+}
+
+#top_header{
+	background-color:#006699;
+	height: 40px;
+	left: 0;
+	max-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	color:white;
+}
+#top_header a{ color:white;}
+#top_header a:hover{ color:#cff400;}
+#top_header h1{
+	margin:8px;
+	font-size:24px;
+}
+
+#top_menu{
+	float:left;
+	background:0099CC;
+	color:white;
+	position: absolute;
+	right: 70px;
+	top: 15px;
+	width: auto;
+	height:30px;
+	top: 0;
+	max-width: 100%;
+	min-width:30%;
+}
+#top_menu li{
+	display:inline-block;
+	list-style:circle;
+	padding:0px 5px 5px 50px;
+	font:bold 12px Tahoma;
+}
+
+
+#content{
+	float:left;
+	position:relative;
+	margin-top:60px;
+	width:100%;
+	//border:1px solid red;
+	
+}
+#rankArea{
+	float:left;
+	position:relative;
+	margin-left:18%;
+	width:30%;
+}
+#bg_info{
+	float:left;
+	position:relative;
+	text-align:center;
+	margin:50% 5% 25% 18%;
+	width:400px;
+	height:160px;
+	//border:3px solid red;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-size:120%;
+	color:#868686;
+	padding-top:30px;
+}
+#bg_info span{
+	font-size:180%;
+}
+table{
+	border:3px solid white;
+	background-color:white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: -5px -2px 5px #888888;
+	width:110%;
+}
+
+td h3{
+	text-align: center;
+	color:#999999;
+}
+td img{
+	width:100px;
+	height:80px;
+}
+thead{
+	position:relative;
+	background-color:white;
+	z-index:1;
+	line-height:0px;
+	height:10px;
+	//text-shadow: 1px 1px 2px rgba(50,50,50,3);
+	text-align:center;
+	color:#F0F0F0;
+	font-size:24px;
+}
+.tbg1{
+	background-color:#A68500;
+	color:white;
+	text-shadow: 1px 1px 10px #999;
+	border-right:1px solid #868686;
+	border-bottom:1px solid #868686;
+}
+.tbg2{
+	background-color:#8A8A8A;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	width:300px;
+}
+.ranking{
+	
+	top: 0px;
+	width: 100px;
+	text-align: center;
+	font-family: "Nunito",Geneva,Verdana,sans-serif;
+	font-size: 48px;
+	line-height: 56px;
+	font-weight: 100;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+}
+.result{
+	margin:10px;
+	top: 0px;
+	line-height: 36px;
+	font-weight: 100;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	font-size: 16px;
+}
+.job,.job a{
+	
+	text-align: center;
+	color:white;
+	font-family: "微軟正黑體","Nunito",Geneva,Verdana,sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	line-height: 56px;
+	position: relative;
+	display: block;
+	font-size: 110%;
+}
+.com{
+	font-family: "微軟正黑體","Nunito",Geneva,Verdana,sans-serif;
+	font-size: 14px;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+	text-align: center;
+	display: block;
+}
+#bgc1{background-color:#99C2D6}
+#section{
+	float:left;
+	position:fixed;
+	margin:0 30px 0 60%;
+	width:25%;
+	//border:1px solid pink;
+	
+}
+#icon img{
+	margin:25% 25% 0 25%;
+	float:left;
+	width:50%;
+	height:50%;
+}
+#userId{
+	float:left;
+	margin:0 15% 20px 15%;
+	width:70%;
+	//border:1px solid green;
+	text-align:center;
+	background-color:#A0A0A0;
+	font-size:100%;
+	font-family:Tahoma;
+	color:white;
+	border-radius:25px;
+	text-shadow: 1px 1px 2px rgba(150,150,150,1);
+}
+
+.selector{
+	float:left;
+	margin:0 15% 0 15%;
+	width:70%;
+	height:400px;
+	//border:1px solid blue;
+}
+#usr_menu,#choose
+{
+	padding:5px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+	font:bold 18px Tahoma;
+	cursor: pointer; 
+	overflow-x: auto; /* Hide horizontal scroll bar*/
+	overflow-y: auto; /*Show vertical scroll bar*/
+}
+#choose:hover{
+	background: -webkit-linear-gradient(left top, #e5eecc , #CED6B8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #e5eecc, #CED6B8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #e5eecc, #CED6B8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #e5eecc , #CED6B8); /* Standard syntax (must be last) */
+}
+#usr_menu ul{
+	width:100%;
+	display:block;
+	list-style:none;
+	margin:0 0 0 -50px;
+	max-height:240px;
+}
+#usr_menu li{
+	display:block;
+	width:100%;
+	padding:5px;
+}
+#usr_menu li:hover{
+	background-color:#CED6B8;
+}
+#usr_menu
+{
+display:none;
+}
+
+
+#the_footer{
+	clear:both;
+	text-align:center;
+	margin-top:10px;
+	padding:10px;
+	border-top:1px solid #006699;
+	font-family:Tahoma;
+}
