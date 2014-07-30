@@ -46,6 +46,7 @@ a{
 	float:left;
 	color:#A0A0A0;
 	font:bold 28px Tahoma;
+	
 }
 #main_img{
 	top: 0;	
@@ -54,7 +55,7 @@ a{
 }
 #main_btn{
 	position:relative;
-	margin-left:150px;
+	margin-left:175px;
 }
 .btnClick{
 	float:left;

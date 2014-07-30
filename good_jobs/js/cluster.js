@@ -18,7 +18,7 @@ $(document).ready(function(){
 					$("#usr_menu").html("");
 					var userList = '<ul>'
 					for(var i=1; i<= data.clusters.length; i++)
-					userList += '<li>Job 0'+ ((i<10)? '0'+ i : i) + '</li>';
+					userList += '<li>Cluster 0'+ ((i<10)? '0'+ i : i) + '</li>';
 					userList += '</ul>';
 					$("#usr_menu").append(userList);
 					clusterType = 'Job';
@@ -60,7 +60,7 @@ $(document).ready(function(){
 					$("#usr_menu").html("");
 					var userList = '<ul>'
 					for(var i=0; i< data.clusters.length; i++)
-					userList += '<li>'+ clusterType +'  ' + data.clusters[i].id + '</li>';
+					userList += '<li>Cluster  ' + data.clusters[i].id + '</li>';
 					userList += '</ul>';
 					$("#usr_menu").append(userList);
 				});
